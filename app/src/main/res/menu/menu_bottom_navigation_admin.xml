@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_admin_movie"
+        android:icon="@drawable/ic_admin_movie"
+        android:title="@string/admin_movie" />
+
+    <item
+        android:id="@+id/nav_admin_genre"
+        android:icon="@drawable/ic_admin_genre"
+        android:title="@string/admin_genre" />
+
+    <item
+        android:id="@+id/nav_admin_product"
+        android:icon="@drawable/ic_admin_product"
+        android:title="@string/admin_product" />
+
+    <item
+        android:id="@+id/nav_admin_history"
+        android:icon="@drawable/ic_admin_history"
+        android:title="@string/admin_history" />
+
+    <item
+        android:id="@+id/nav_admin_manage"
+        android:icon="@drawable/ic_admin_manage"
+        android:title="@string/admin_manage" />
+</menu>

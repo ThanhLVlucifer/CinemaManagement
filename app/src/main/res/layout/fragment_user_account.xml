@@ -1,14 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/orange"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/define_dimen_10">
+
+    <ImageView
+        android:layout_width="@dimen/define_dimen_50"
+        android:layout_height="@dimen/define_dimen_50"
+        android:src="@drawable/ic_account_circle" />
 
     <TextView
+        android:id="@+id/tv_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="3"
-        tools:ignore="MissingConstraints" />
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/text_size_normal"
+        android:textStyle="bold" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/define_dimen_2"
+        android:layout_marginTop="@dimen/define_dimen_5"
+        android:background="@color/green" />
+
+    <RelativeLayout
+        android:id="@+id/layout_change_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/define_dimen_5">
+
+        <ImageView
+            android:id="@+id/img_change_password"
+            android:layout_width="@dimen/define_dimen_30"
+            android:layout_height="@dimen/define_dimen_30"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_account_change" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/define_dimen_5"
+            android:layout_toEndOf="@+id/img_change_password"
+            android:text="@string/label_change_password"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/text_size_small" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/define_dimen_1"
+        android:layout_marginTop="@dimen/define_dimen_5"
+        android:background="@color/green" />
+
+    <RelativeLayout
+        android:id="@+id/layout_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/define_dimen_5">
+
+        <ImageView
+            android:id="@+id/img_logout"
+            android:layout_width="@dimen/define_dimen_30"
+            android:layout_height="@dimen/define_dimen_30"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_logout" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/define_dimen_5"
+            android:layout_toEndOf="@+id/img_logout"
+            android:text="@string/label_logout"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/text_size_small" />
+    </RelativeLayout>
+</LinearLayout>

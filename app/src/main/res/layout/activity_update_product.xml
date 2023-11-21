@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".controller.updateproduct.UpdateProductActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/define_dimen_10">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/label_update_product"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_xnormal"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edt_enter_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/define_dimen_5"
+            android:background="@drawable/bg_white_shape_border_green"
+            android:hint="@string/label_enter_name"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:padding="@dimen/define_dimen_12"
+            android:textSize="@dimen/text_size_small" />
+
+        <EditText
+            android:id="@+id/edt_enter_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/define_dimen_5"
+            android:background="@drawable/bg_white_shape_border_green"
+            android:hint="@string/label_enter_description"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:padding="@dimen/define_dimen_12"
+            android:textSize="@dimen/text_size_small" />
+
+        <EditText
+            android:id="@+id/edt_enter_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/define_dimen_5"
+            android:background="@drawable/bg_white_shape_border_green"
+            android:hint="@string/label_enter_price"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:padding="@dimen/define_dimen_12"
+            android:textSize="@dimen/text_size_small" />
+
+
+        <EditText
+            android:id="@+id/edt_enter_url_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/define_dimen_5"
+            android:background="@drawable/bg_white_shape_border_green"
+            android:hint="@string/label_enter_url_image"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:padding="@dimen/define_dimen_12"
+            android:textSize="@dimen/text_size_small" />
+
+
+        <Button
+            android:id="@+id/btn_update_product"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="@dimen/define_dimen_30"
+            android:backgroundTint="@color/green"
+            android:text="@string/label_apply" />
+
+    </LinearLayout>
+
+</ScrollView>

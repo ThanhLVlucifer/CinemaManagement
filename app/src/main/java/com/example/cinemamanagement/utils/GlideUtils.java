@@ -3,6 +3,7 @@ package com.example.cinemamanagement.utils;
 import android.widget.ImageView;
 
 //import com.bumptech.glide.Glide;
+import com.bumptech.glide.Glide;
 import com.example.cinemamanagement.R;
 
 public class GlideUtils {
@@ -20,14 +21,14 @@ public class GlideUtils {
     }
 
     public static void loadUrl(String url, ImageView imageView) {
-//        if (StringUtil.isEmpty(url)) {
-//            imageView.setImageResource(R.drawable.image_no_available);
-//            return;
-//        }
-//        Glide.with(imageView.getContext())
-//                .load(url)
-//                .error(R.drawable.image_no_available)
-//                .dontAnimate()
-//                .into(imageView);
+        if (StringUtil.isEmpty(url)) {
+            imageView.setImageResource(R.drawable.image_no_available);
+            return;
+        }
+        Glide.with(imageView.getContext())
+                .load(url)
+                .error(R.drawable.image_no_available)
+                .dontAnimate()
+                .into(imageView);
     }
 }

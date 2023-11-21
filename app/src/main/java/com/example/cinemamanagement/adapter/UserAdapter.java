@@ -5,9 +5,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.example.cinemamanagement.controller.UserAccountFragment;
-import com.example.cinemamanagement.controller.UserHistoryBookingFragment;
-import com.example.cinemamanagement.controller.UserHomeFragment;
+import com.example.cinemamanagement.controller.useraccount.UserAccountFragment;
+import com.example.cinemamanagement.controller.userhistorybooking.UserHistoryBookingFragment;
+import com.example.cinemamanagement.controller.userhome.UserHomeFragment;
 
 public class UserAdapter extends FragmentStateAdapter {
     public UserAdapter(@NonNull FragmentActivity fragmentActivity) {

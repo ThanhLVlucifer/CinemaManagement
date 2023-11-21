@@ -1,5 +1,6 @@
 package com.example.cinemamanagement.controller;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
@@ -8,6 +9,16 @@ import android.os.Bundle;
 import com.example.cinemamanagement.R;
 import com.example.cinemamanagement.adapter.UserAdapter;
 import com.example.cinemamanagement.databinding.ActivityUserBinding;
+import com.example.cinemamanagement.model.Movie;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserActivity extends AppCompatActivity {
     private ActivityUserBinding mActivityUserBinding;
@@ -50,4 +61,5 @@ public class UserActivity extends AppCompatActivity {
             return true;
         });
     }
+
 }

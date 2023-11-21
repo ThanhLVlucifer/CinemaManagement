@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/define_dimen_10"
+    tools:ignore="Autofill,LabelFor"
+    tools:viewBindingIgnore="true">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/label_confirm_information"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="@dimen/text_size_xnormal"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/define_dimen_20"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/define_dimen_120"
+            android:layout_height="wrap_content"
+            android:text="@string/movie_name"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tv_movie_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/define_dimen_5"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/define_dimen_5"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/define_dimen_120"
+            android:layout_height="wrap_content"
+            android:text="@string/movie_release_date"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tv_release_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/define_dimen_5"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="normal" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/define_dimen_5"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/define_dimen_120"
+            android:layout_height="wrap_content"
+            android:text="@string/label_room"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tv_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/define_dimen_5"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/define_dimen_5"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/define_dimen_120"
+            android:layout_height="wrap_content"
+            android:text="@string/label_showtime"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tv_showtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/define_dimen_5"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/define_dimen_5"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/define_dimen_120"
+            android:layout_height="wrap_content"
+            android:text="@string/label_ticket_quantity"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tv_quantity_ticket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/define_dimen_5"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="normal" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/define_dimen_5"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/define_dimen_120"
+            android:layout_height="wrap_content"
+            android:text="@string/label_set_checked"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tv_seats_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/define_dimen_5"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/define_dimen_5">
+
+        <TextView
+            android:id="@+id/label_product"
+            android:layout_width="@dimen/define_dimen_120"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/label_product"
+            android:textSize="@dimen/text_size_normal" />
+
+        <TextView
+            android:id="@+id/tv_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/define_dimen_5"
+            android:layout_toEndOf="@+id/label_product"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/text_size_normal" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/define_dimen_5"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/define_dimen_120"
+            android:layout_height="wrap_content"
+            android:text="@string/label_payment_method_bts"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tv_payment_method"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/define_dimen_5"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="@dimen/text_size_normal"
+            android:textStyle="normal" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/define_dimen_1"
+        android:layout_marginTop="@dimen/define_dimen_5"
+        android:background="@color/green" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/define_dimen_5"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/define_dimen_120"
+            android:layout_height="wrap_content"
+            android:text="@string/label_total_payment"
+            android:textColor="@color/green"
+            android:textSize="@dimen/text_size_xnormal"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tv_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/define_dimen_5"
+            android:textColor="@color/green"
+            android:textSize="@dimen/text_size_xnormal"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/define_dimen_20"
+        android:backgroundTint="@color/dividerColor"
+        android:text="@string/cancel"
+        tools:ignore="InefficientWeight,Suspicious0dp" />
+
+    <com.paypal.checkout.paymentbutton.PaymentButtonContainer
+        android:layout_marginTop="@dimen/define_dimen_10"
+        android:id="@+id/payment_button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:paypal_button_color="blue"
+        app:paypal_button_enabled="true"
+        app:paypal_button_label="pay"
+        app:paypal_button_shape="rectangle"
+        app:paypal_button_size="large" />
+</LinearLayout>

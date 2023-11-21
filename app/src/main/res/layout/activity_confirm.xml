@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".controller.confirm.ConfirmActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/green"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/define_dimen_2"
+        android:paddingTop="@dimen/define_dimen_2"
+        android:paddingEnd="@dimen/define_dimen_2"
+        android:paddingBottom="@dimen/define_dimen_1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="@string/label_cf_room"
+            android:textColor="@color/textColorPrimary"
+            tools:ignore="NestedWeights" />
+
+        <View
+            android:layout_width="@dimen/define_dimen_2"
+            android:layout_height="match_parent"
+            android:background="@color/green" />
+
+        <ListView
+            android:id="@+id/list_room"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:choiceMode="singleChoice"
+            android:nestedScrollingEnabled="false" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_lv_screening"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/green"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/define_dimen_2"
+        android:paddingTop="@dimen/define_dimen_1"
+        android:paddingEnd="@dimen/define_dimen_2"
+        android:paddingBottom="@dimen/define_dimen_2">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="@string/label_cf_showtime"
+            android:textColor="@color/textColorPrimary"
+            tools:ignore="NestedWeights" />
+
+        <View
+            android:layout_width="@dimen/define_dimen_2"
+            android:layout_height="match_parent"
+            android:background="@color/green" />
+
+        <ListView
+            android:id="@+id/list_screening"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:choiceMode="singleChoice"
+            android:nestedScrollingEnabled="false" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:background="@color/white"
+                    android:paddingStart="@dimen/define_dimen_2"
+                    android:paddingTop="@dimen/define_dimen_1"
+                    android:paddingEnd="@dimen/define_dimen_2"
+                    android:paddingBottom="@dimen/define_dimen_2"
+                    android:id="@+id/layout_seat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:textColor="@color/textColorPrimary"
+                        android:textSize="@dimen/text_size_normal"
+                        android:textStyle="bold"
+                        android:background="@color/white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_cf_screen" />
+
+                    <View
+                        android:layout_margin="@dimen/define_dimen_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/define_dimen_3"
+                        android:background="@color/green"
+                        />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_margin="@dimen/define_dimen_3"
+                        android:background="@color/white"
+                        android:id="@+id/rvc_seat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_margin="@dimen/define_dimen_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_cf_select_product"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="@dimen/text_size_xnormal"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_margin="@dimen/define_dimen_3"
+                    android:id="@+id/rcv_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_margin="@dimen/define_dimen_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_cf_payment_method"
+                    android:textColor="@color/textColorPrimary"
+                    android:textSize="@dimen/text_size_xnormal"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:layout_margin="@dimen/define_dimen_2"
+                    android:id="@+id/spn_payment_method"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="spn" />
+
+                <Button
+                    android:layout_marginStart="@dimen/define_dimen_3"
+                    android:layout_marginEnd="@dimen/define_dimen_3"
+                    android:backgroundTint="@color/green"
+                    android:id="@+id/btn_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="xac nhan" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+</LinearLayout>

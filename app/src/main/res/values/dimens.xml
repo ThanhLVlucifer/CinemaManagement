@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="define_dimen_1">1dp</dimen>
     <dimen name="define_dimen_2">2dp</dimen>
+    <dimen name="define_dimen_3">3dp</dimen>
     <dimen name="define_dimen_4">4dp</dimen>
     <dimen name="define_dimen_5">5dp</dimen>
     <dimen name="define_dimen_6">6dp</dimen>
@@ -31,6 +33,7 @@
     <dimen name="define_dimen_160">160dp</dimen>
     <dimen name="define_dimen_180">180dp</dimen>
     <dimen name="define_dimen_200">200dp</dimen>
+    <dimen name="define_dimen_250">250dp</dimen>
     <dimen name="define_dimen_300">300dp</dimen>
     <dimen name="define_dimen_400">400dp</dimen>
     <dimen name="define_dimen_500">500dp</dimen>
