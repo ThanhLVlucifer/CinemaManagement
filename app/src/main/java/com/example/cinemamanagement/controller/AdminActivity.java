@@ -3,6 +3,7 @@ package com.example.cinemamanagement.controller;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 
 import com.example.cinemamanagement.R;
@@ -62,9 +63,4 @@ public class AdminActivity extends AppCompatActivity {
         });
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        finishAffinity();
-    }
 }

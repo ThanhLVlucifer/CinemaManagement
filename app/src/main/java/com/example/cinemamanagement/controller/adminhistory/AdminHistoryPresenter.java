@@ -23,7 +23,7 @@ public class AdminHistoryPresenter {
         this.adminHistoryView = adminHistoryView;
     }
 
-    public void getAllListBooking(@NonNull Context context, String key) {
+    public void getListBooking(@NonNull Context context, String key) {
         if (context == null) {
             return;
         }

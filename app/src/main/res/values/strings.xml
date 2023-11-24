@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">Cinema Management</string>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name" tools:ignore="PrivateResource">Cinema</string>
 
     // Messenger
     <string name="registration_failed">Đăng ký thất bại</string>
@@ -21,14 +21,17 @@
     <string name="sign_in_account">ĐĂNG NHẬP TÀI KHOẢN</string>
     <string name="sign_up">Đăng Ký</string>
     <string name="sign_up_account">ĐĂNG KÝ TÀI KHOẢN</string>
-    <string name="email">Email</string>
-    <string name="password">Mật khẩu</string>
+    <string name="enter_email">Nhập email</string>
+    <string name="enter_password">Nhập mật khẩu</string>
     <string name="admin_role">Quản trị viên</string>
     <string name="user_role">Người dùng</string>
     <string name="already_have_an_account">Đã có tài khoản?</string>
     <string name="no_account">Chưa có tài khoản?</string>
     <string name="forgot_password">Quên mật khẩu</string>
     <string name="send_again_password">GỬI LẠI MẬT KHẨU</string>
+
+    <string name="role_client">Client</string>
+    <string name="role_admin">Admin</string>
 
     // Layout User Home
     <string name="search_name_moive">Tên phim</string>
@@ -237,5 +240,9 @@
 
     <string name="confirm_delete_movie">Xác nhận xóa phim </string>
     <string name="message_delete_movie">Bạn có chắc chắn muốn xóa phim này không?</string>
+
+
+    <string name="invalid_email">Email không hợp lệ</string>
+    <string name="invalid_password">Mật khẩu không hợp lệ</string>
 
 </resources>

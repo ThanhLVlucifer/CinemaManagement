@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/sign_in"
-        android:textColor="@color/black"
+        android:textColor="@color/textColorPrimary"
         android:textSize="@dimen/text_size_xxlarge"
         android:textStyle="bold" />
 
@@ -23,11 +23,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/define_dimen_30"
-        android:hint="@string/email"
+        android:background="@drawable/bg_white_shape_border_green"
+        android:hint="@string/enter_email"
         android:imeOptions="actionNext"
         android:inputType="textEmailAddress"
         android:maxLength="100"
-        android:textColor="@color/black"
+        android:padding="@dimen/define_dimen_12"
+        android:textColor="@color/textColorPrimary"
         android:textSize="@dimen/text_size_xxnormal" />
 
     <EditText
@@ -35,11 +37,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/define_dimen_10"
-        android:hint="@string/password"
+        android:background="@drawable/bg_white_shape_border_green"
+        android:hint="@string/enter_password"
         android:imeOptions="actionDone"
         android:inputType="textPassword"
         android:maxLength="100"
-        android:textColor="@color/black"
+        android:padding="@dimen/define_dimen_12"
+        android:textColor="@color/textColorPrimary"
         android:textSize="@dimen/text_size_xxnormal" />
 
     <RadioGroup
@@ -54,8 +58,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/define_dimen_40"
-            android:text="Client"
             android:checked="true"
+            android:text="@string/role_client"
             android:textColor="@color/textColorPrimary"
             android:textSize="@dimen/text_size_normal" />
 
@@ -63,7 +67,7 @@
             android:id="@+id/rb_admin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Admin"
+            android:text="@string/role_admin"
             android:textColor="@color/textColorPrimary"
             android:textSize="@dimen/text_size_normal" />
     </RadioGroup>
@@ -75,7 +79,8 @@
         android:layout_marginTop="@dimen/define_dimen_30"
         android:backgroundTint="@color/green"
         android:text="@string/sign_in"
-        android:textSize="@dimen/define_dimen_18" />
+        android:textSize="@dimen/define_dimen_18"
+        tools:ignore="SpUsage" />
 
     <LinearLayout
         android:id="@+id/layout_forgot_password"

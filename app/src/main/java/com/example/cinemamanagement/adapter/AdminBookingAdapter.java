@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.cinemamanagement.constant.Constant;
 import com.example.cinemamanagement.databinding.ItemBookingAdminBinding;
 import com.example.cinemamanagement.databinding.ItemBookingBinding;
 import com.example.cinemamanagement.model.Booking;
@@ -46,9 +47,9 @@ public class AdminBookingAdapter extends RecyclerView.Adapter<AdminBookingAdapte
         holder.itemBookingBinding.tvTicketQuantity.setText(String.valueOf(booking.getTicketQuantity()));
         holder.itemBookingBinding.tvSelectedSeat.setText(booking.getSelectedSeat());
         holder.itemBookingBinding.tvProduct.setText(booking.getSelectedProduct());
-        holder.itemBookingBinding.tvPaymentMethod.setText("Tiền mặt");
+        holder.itemBookingBinding.tvPaymentMethod.setText(Constant.PAYMENT_METHOD_PAYPAL);
 
-        String total = booking.getTotalPayment() + ".000đ";
+        String total = booking.getTotalPayment() + Constant.CURRENCY_USD;
         holder.itemBookingBinding.tvTotalPayment.setText(total);
     }
 

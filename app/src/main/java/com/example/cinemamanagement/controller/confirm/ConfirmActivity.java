@@ -164,7 +164,8 @@ public class ConfirmActivity extends AppCompatActivity implements ConfirmView, I
             paymentMethod = Constant.PAYMENT_METHOD_PAYPAL;
         }
         tvPaymentMethod.setText(paymentMethod);
-        tvTotal.setText(String.valueOf(totalPayment));
+        String str = String.valueOf(totalPayment) + Constant.CURRENCY_USD;
+        tvTotal.setText(str);
 
         btnCancel.setOnClickListener(view -> bottomSheetDialog.dismiss());
 

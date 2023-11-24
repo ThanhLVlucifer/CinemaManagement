@@ -41,9 +41,8 @@ public class UserHistoryBookingFragment extends Fragment implements UserHistoryB
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         userHistoryBookingPresenter.getListBooking(getActivity(), user.getUid().toString());
-        mFragmentUserHistoryBookingBinding.imgBack.setOnClickListener(view -> {
+        mFragmentUserHistoryBookingBinding.imgCreateQrCode.setOnClickListener(view -> {
             mFragmentUserHistoryBookingBinding.imgCreateQrCode.setVisibility(View.GONE);
-            mFragmentUserHistoryBookingBinding.imgBack.setVisibility(View.GONE);
         });
 
         return mFragmentUserHistoryBookingBinding.getRoot();
@@ -64,7 +63,6 @@ public class UserHistoryBookingFragment extends Fragment implements UserHistoryB
                 Bitmap bitmap = encodeAsBitmap(id);
                 mFragmentUserHistoryBookingBinding.imgCreateQrCode.setImageBitmap(bitmap);
                 mFragmentUserHistoryBookingBinding.imgCreateQrCode.setVisibility(View.VISIBLE);
-                mFragmentUserHistoryBookingBinding.imgBack.setVisibility(View.VISIBLE);
             } catch (WriterException e) {
                 e.printStackTrace();
             }

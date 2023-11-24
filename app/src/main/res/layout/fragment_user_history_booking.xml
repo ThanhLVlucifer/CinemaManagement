@@ -21,14 +21,14 @@
         tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:visibility="gone"
         android:id="@+id/img_back"
         android:layout_width="@dimen/define_dimen_30"
         android:layout_height="@dimen/define_dimen_30"
-        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:layout_marginTop="@dimen/define_dimen_20"
         android:layout_marginEnd="@dimen/define_dimen_20"
-        android:src="@drawable/ic_exit" />
+        android:src="@drawable/ic_logout"
+        android:visibility="gone" />
 
 </RelativeLayout>

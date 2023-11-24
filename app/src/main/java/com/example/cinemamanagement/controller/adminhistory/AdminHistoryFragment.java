@@ -9,6 +9,7 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
@@ -34,7 +35,8 @@ public class AdminHistoryFragment extends Fragment implements AdminHistoryView {
         fragmentAdminHistoryBinding = FragmentAdminHistoryBinding.inflate(inflater, container, false);
         adminHistoryPresenter = new AdminHistoryPresenter(this);
         initView();
-        adminHistoryPresenter.getAllListBooking(getContext(), "");
+        adminHistoryPresenter.getListBooking(getContext(), "");
+        setEventSearch();
         fragmentAdminHistoryBinding.scanQrCode.setOnClickListener(view -> {
             ScanOptions options = new ScanOptions();
             options.setPrompt(getString(R.string.msg_volume_up_to_flash_on));
@@ -49,9 +51,24 @@ public class AdminHistoryFragment extends Fragment implements AdminHistoryView {
 
     ActivityResultLauncher<ScanOptions> barLaucher = registerForActivityResult(new ScanContract(), result -> {
         if (result.getContents() != null) {
-            adminHistoryPresenter.getAllListBooking(getContext(), result.getContents().trim());
+            adminHistoryPresenter.getListBooking(getContext(), result.getContents().trim());
         }
     });
+
+    private void setEventSearch() {
+        fragmentAdminHistoryBinding.search.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                adminHistoryPresenter.getListBooking(getContext(), newText);
+                return true;
+            }
+        });
+    }
 
     private void initView() {
         if (getActivity() == null) {

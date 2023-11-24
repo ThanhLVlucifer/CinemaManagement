@@ -1,11 +1,11 @@
 package com.example.cinemamanagement.utils;
 
+import android.util.Patterns;
+
 public class StringUtil {
 
-    public static boolean isValidEmail(CharSequence target) {
-        if (target == null)
-            return false;
-        return android.util.Patterns.EMAIL_ADDRESS.matcher(target).matches();
+    public static boolean isValidEmail(String email) {
+        return Patterns.EMAIL_ADDRESS.matcher(email).matches();
     }
 
     public static boolean isGoodField(String input) {

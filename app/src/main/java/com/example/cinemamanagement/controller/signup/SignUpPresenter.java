@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 
 import com.example.cinemamanagement.R;
 import com.example.cinemamanagement.controller.UserActivity;
+import com.example.cinemamanagement.utils.StringUtil;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
@@ -25,6 +26,9 @@ public class SignUpPresenter {
     }
 
     public void registerSuccess(@NonNull Activity activity, String email, String password) {
+        if (activity == null || StringUtil.isEmpty(email) || StringUtil.isEmpty(password)) {
+            return;
+        }
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(activity, task -> {

@@ -34,15 +34,18 @@ public class SplashActivity extends AppCompatActivity implements SplashView {
     @Override
     public void switchToSignInActivity() {
         GlobalFuntion.startActivity(getApplicationContext(), SignInActivity.class);
+        finish();
     }
 
     @Override
     public void switchToUserActivity() {
         GlobalFuntion.startActivity(getApplicationContext(), UserActivity.class);
+        finish();
     }
 
     @Override
     public void switchToAdminActivity() {
         GlobalFuntion.startActivity(getApplicationContext(), AdminActivity.class);
+        finish();
     }
 }

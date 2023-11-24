@@ -31,6 +31,12 @@ public class SignInPresenter {
 
 
     public void switchToMainActivity(@NonNull Activity activity, String email, String password, boolean rbClientchecked) {
+        if (activity == null) {
+            return;
+        }
+        if (StringUtil.isEmpty(email) || StringUtil.isEmpty(password)) {
+            return;
+        }
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(activity, task -> {

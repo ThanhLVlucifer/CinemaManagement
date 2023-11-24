@@ -4,12 +4,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rcv_booking"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/define_dimen_10"
-        android:layout_marginTop="@dimen/define_dimen_10" />
+        android:layout_marginTop="@dimen/define_dimen_10"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_booking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/define_dimen_10"
+            android:layout_marginTop="@dimen/define_dimen_10" />
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/scan_qr_code"
