@@ -1,10 +1,14 @@
 package com.example.cinemamanagement.database;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.example.cinemamanagement.ControllerApplication;
 import com.example.cinemamanagement.R;
+import com.example.cinemamanagement.controller.userhome.UserHomePresenter;
+import com.example.cinemamanagement.controller.userhome.UserHomeView;
 import com.example.cinemamanagement.model.Actor;
 import com.example.cinemamanagement.model.Genre;
 import com.example.cinemamanagement.model.Movie;
@@ -12,13 +16,18 @@ import com.example.cinemamanagement.model.Product;
 import com.example.cinemamanagement.model.Room;
 import com.example.cinemamanagement.model.Screening;
 import com.example.cinemamanagement.model.Seat;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class DatabaseInitActivity extends AppCompatActivity {
 
@@ -26,6 +35,8 @@ public class DatabaseInitActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_database_init);
+
+//        pushSchedule();
 
 //        pushDataLookup();
 //        pushDataActor();
@@ -36,6 +47,34 @@ public class DatabaseInitActivity extends AppCompatActivity {
 //        pushDataSeat();
 //        pushDataScreening();
 //        pushDataRoom();
+    }
+
+    private List<String> getListMovieShowing() {
+        List<String> list = new ArrayList<>();
+        list.add("Titanic");
+        list.add("Avatar");
+        list.add("Avengers: Endgame");
+        list.add("La La Land (2016)");
+        list.add("Yêu Lại Vợ Ngầu");
+        list.add("Spiderman Across Spider-Verse");
+        return list;
+    }
+
+    private void pushSchedule() {
+        List<String> movieShowing = getListMovieShowing();
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference reference = database.getReference("schedules");
+        List<List<Map<String, String>>> rooms = new ArrayList<>();
+        for (int i = 0; i < 6; i++) {
+            List<Map<String, String>> screenings = new ArrayList<>();
+            for (int j = 0; j < 6; j++) {
+                Map<String, String> map = new HashMap<>();
+                map.put("movie", movieShowing.get(i));
+                screenings.add(map);
+            }
+            rooms.add(screenings);
+        }
+        reference.setValue(rooms);
     }
 
     private void pushDataLookup() {

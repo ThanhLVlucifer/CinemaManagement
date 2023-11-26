@@ -13,4 +13,7 @@ public interface ConfirmView {
     void colorClassificationSuccess(List<Seat> list);
     void loadListProductSuccess(List<Product> list);
     void sendBookingSuccess();
+
+    void showing();
+    void notShowing();
 }

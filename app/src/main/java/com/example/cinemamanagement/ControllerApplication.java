@@ -68,4 +68,8 @@ public class ControllerApplication extends Application {
     public DatabaseReference getBookingDatabaseReference() {
         return mFirebaseDatabase.getReference(Constant.FIREBASE_BOOKING_TABLE);
     }
+
+    public DatabaseReference getScheduleDatabaseReference() {
+        return mFirebaseDatabase.getReference(Constant.FIREBASE_SCHEDULE_TABLE);
+    }
 }

@@ -32,7 +32,7 @@ public class UserHistoryBookingPresenter {
                         for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                             Booking booking = dataSnapshot.getValue(Booking.class);
                             if (booking.getIdUser().equals(Uid)) {
-                                list.add(booking);
+                                list.add(0, booking);
                             }
                         }
                         userHistoryBookingView.loadListBooking(list);

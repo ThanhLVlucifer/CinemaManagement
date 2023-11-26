@@ -24,6 +24,33 @@ public class ConfirmPresenter {
         this.confirmView = confirmView;
     }
 
+    public void checkSchedule(@NonNull Context context, String movieName, int idRoom, int idScreening) {
+        if (context == null) {
+            return;
+        }
+        ControllerApplication.get(context).getScheduleDatabaseReference()
+                .child(String.valueOf(idRoom))
+                .child(String.valueOf(idScreening))
+                .child(Constant.MOVIE_COLUMN)
+                .addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        String str = snapshot.getValue(String.class);
+                        if (str.equals(movieName)) {
+                            confirmView.showing();
+                        } else {
+                            confirmView.notShowing();
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                        confirmView.loadListError();
+                    }
+                });
+
+    }
+
     public void updateTicket(@NonNull Context context, List<Seat> selectSeat, Seat seat) {
         if (context == null) {
             return;

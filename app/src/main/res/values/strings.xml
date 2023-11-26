@@ -33,6 +33,7 @@
     <string name="role_client">Client</string>
     <string name="role_admin">Admin</string>
 
+
     // Layout User Home
     <string name="search_name_moive">Tên phim</string>
     <string name="all_movie">Tất cả phim</string>
@@ -179,6 +180,9 @@
 
 
     <string name="msg_booking_ticket_success">Đặt vé thành công, vui lòng kiểm tra trong phần Lịch sử</string>
+
+    <string name="msg_check_schedule">Phim không được chiếu trong phòng này hoặc khung thời gian này</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_movie_detail">MovieDetailActivity</string>

@@ -221,15 +221,13 @@ public class ConfirmActivity extends AppCompatActivity implements ConfirmView, I
         activityConfirmBinding.listRoom.setOnItemClickListener((adapterView, view, i, l) -> {
             idRoom = i;
             if (idScreening != -1) {
-                confirmPresenter.getListSeat(getApplicationContext());
-                activityConfirmBinding.layoutSeat.setVisibility(View.VISIBLE);
+                confirmPresenter.checkSchedule(getApplicationContext(), movie.getName(), idRoom, idScreening);
             }
         });
         activityConfirmBinding.listScreening.setOnItemClickListener((adapterView, view, i, l) -> {
             idScreening = i;
             if (idScreening != -1) {
-                confirmPresenter.getListSeat(getApplicationContext());
-                activityConfirmBinding.layoutSeat.setVisibility(View.VISIBLE);
+                confirmPresenter.checkSchedule(getApplicationContext(), movie.getName(), idRoom, idScreening);
             }
         });
     }
@@ -299,6 +297,17 @@ public class ConfirmActivity extends AppCompatActivity implements ConfirmView, I
         bottomSheetDialog.dismiss();
         confirmPresenter.updateLookup(getApplicationContext(), selectSeat, idRoom, idScreening);
         seatAdapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void showing() {
+        confirmPresenter.getListSeat(getApplicationContext());
+        activityConfirmBinding.layoutSeat.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void notShowing() {
+        activityConfirmBinding.layoutSeat.setVisibility(View.GONE);
     }
 
     @SuppressLint("NotifyDataSetChanged")

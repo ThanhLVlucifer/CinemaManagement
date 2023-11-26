@@ -10,10 +10,12 @@ public interface Constant {
     String FIREBASE_LOOKUP_TABLE = "lookups";
     String FIREBASE_PRODUCT_TABLE = "products";
     String FIREBASE_BOOKING_TABLE = "bookings";
+    String FIREBASE_SCHEDULE_TABLE = "schedules";
 
     String NAME_COLUMN = "name";
     String START_TIME_COLUMN = "startTime";
     String GENREID_COLUMN = "genreIds";
+    String MOVIE_COLUMN = "movie";
 
     String AVAILABLE_STATUS = "available";
     String UNAVAILABLE_STATUS = "unavailable";
